@@ -6,17 +6,17 @@ bem como a função que busca os produtos por preço:
 
 https://gist.github.com/acenelio/fa7d03cb660b35cd9986623f1f07aeb3
 
-![image]()
+![image](https://raw.githubusercontent.com/anderson-aguiar/dsfilter/main/src/assets/img1.png)
 
 O corpo da tela deve ser um componente (na imagem abaixo: ListingBody) que possui dois filhos: o card de filtro, e o card de listagem. Você DEVE implementar um
 evento para fazer o componente de filtro notificar os parâmetros de filtragem dos produtos:
 
-![image]()
+![image](https://raw.githubusercontent.com/anderson-aguiar/dsfilter/main/src/assets/img2.png)
 
 No cabeçalho DEVE aparecer o número de produtos listados. Esse número DEVE observar e reagir às mudanças na listagem. Para isto, mantenha um estado global 
 utilizando a Context API.
 
-![image]()
+![image](https://raw.githubusercontent.com/anderson-aguiar/dsfilter/main/src/assets/img3.png)
 
 Checklist:
 1) O projeto deve conter os componentes principais (pode haver outros conforme você quiser):
