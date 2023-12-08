@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+# React: Local Storage, Eventos e estado global
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Desafio DSFilter
+Você deverá criar um projeto ReactJS, usando o Vite, estruturado em componentes. Você deve usar o script abaixo para implementar a base de dados de produtos, 
+bem como a função que busca os produtos por preço:
 
-Currently, two official plugins are available:
+https://gist.github.com/acenelio/fa7d03cb660b35cd9986623f1f07aeb3
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image]()
 
-## Expanding the ESLint configuration
+O corpo da tela deve ser um componente (na imagem abaixo: ListingBody) que possui dois filhos: o card de filtro, e o card de listagem. Você DEVE implementar um
+evento para fazer o componente de filtro notificar os parâmetros de filtragem dos produtos:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![image]()
 
-- Configure the top-level `parserOptions` property like this:
+No cabeçalho DEVE aparecer o número de produtos listados. Esse número DEVE observar e reagir às mudanças na listagem. Para isto, mantenha um estado global 
+utilizando a Context API.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+![image]()
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Checklist:
+1) O projeto deve conter os componentes principais (pode haver outros conforme você quiser):
+- Cabeçalho
+- Corpo da tela de listagem
+- Card de filtro
+- Card de listagem
+2) A lista de produtos deve ser passada como Prop para o card de listagem.
+3) O card de filtro deve emitir um evento onFilter(min, max). Este evento serve para comunicar os preços mínimo e máximo sempre que o formulário for submetido.
+4) Context API utilizada para manter o estado global do número de produtos mostrados na tela. Sempre que for feita uma nova filtragem e o número de produtos
+listados mudar, o número deve ser atualizado no cabeçalho.
+
+Criar conforme design Figma abaixo:
+
+[Ver o layout no figma...](https://www.figma.com/file/s21JDtjv3cRyUfetFYAzIJ/DSFilter)
