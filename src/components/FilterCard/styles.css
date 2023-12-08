@@ -3,6 +3,7 @@
     background-color: var(--dsf-color-bg-tertiary);
     display: flex;
     border-radius: 5px;
+    
 }
 .dsf-form{
     display: flex;
